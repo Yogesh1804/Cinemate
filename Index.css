@@ -1,0 +1,362 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+p{margin-bottom: 0px;}
+
+head, body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 12, 12);
+}
+
+/* .navbar{
+    margin-top: -50px;
+    width: 100%;
+    background-color: #000000;
+    position:fixed;
+    z-index: 10 !important;
+} */
+
+.navbar{
+    /* background-color: aqua; */
+    height: 8%;
+    top:0;
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10 !important;
+}
+
+
+.navbar img{
+    filter: invert();
+    /* height: 10%; */
+    width: 50px;
+    bottom: 20px;
+    align-items: center;
+    
+}
+.logo{
+   display: flex;
+   padding: 0 5%;
+}
+
+
+/* .my-nav{
+    background-color: rgb(225, 53, 53);
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+
+} */
+
+.navbar-brand {
+    padding: 0 0 50px;
+    margin-left: 5%;
+    width: 15%;
+    height: 40px;
+    align-content: center;
+    font-size: 250%;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+
+.btn-group{
+    width: 200px;
+    padding-left: 20px;
+    border-radius: 25px;
+    /* background-color: aqua; */
+}
+
+.btn-group .btn {
+    width: 50px;
+    border-radius: 25px;
+    border-width: 2px;
+    background-color: #000000;
+    /* padding: 10px; */
+}
+
+@media (max-width: 915px){
+    .btn-group {
+        width: 100%;
+        justify-items: center;
+        padding-left: 0;
+    }
+    .btn{
+        width: 100px;
+        justify-content: center;
+    }
+}
+
+.nav-link{
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif
+}
+
+.nav-item a{
+    color: rgb(255, 255, 255);
+
+}
+
+.dropdown-menu{
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(12, 12, 12);
+}
+
+.carousel{
+padding-top: 4%;
+/* position:relative; */
+}
+
+ /* for resizing the carousal */
+/* .carousel-inner{
+  width:100%;
+  max-height: 300px !important;
+} */
+
+.carousel-item img{
+    position:relative;
+
+}
+
+.carousel-item h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 250%;
+    /* font-weight: 400; */
+    /* font-size: xx-large; */
+    font-style: normal;
+    text-shadow: 4px 4px 8px #000000;
+}
+
+.carousel-caption{
+    z-index: 0;
+}
+.carousel-indicators{
+    z-index: 1;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 80px;}
+
+
+.NowShowing{
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    width: 98%;
+    justify-content: center;
+}
+.NowShowing h2{
+    background-color: #000000;
+    border-radius:10px 10px 0 0;
+}
+
+.card-cont h2{
+    font-size: 150%;
+    width: 100%;
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    /* margin: 30px 0px 0 0px; */
+    padding:1%;
+    /* background-color: aqua; */
+    z-index: -1;
+}
+.card-cont{
+    justify-items: center;
+    margin-top: 1%;
+}
+
+
+.cards{
+    /* background-color: blue; */
+    padding: 0% 2% ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content:space-evenly; 
+}
+
+
+
+.cards img{
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card{
+    border-radius: 5px;
+    height: 265px;
+    width: 200px;
+    color: #000000;
+    justify-content:space-evenly;
+    margin: 30px;
+    padding: 3px;
+    /* position: relative; */
+}
+
+@media (max-width: 555px){
+    .carousel{
+       padding-top: 22%;
+    }
+    
+    .carousel-indicators{
+        display: none;
+    }
+    
+    .cards {
+        width: 100%;
+        justify-content:space-evenly;
+        /* padding-left: 0; */
+    }
+
+    .card{
+        margin: 15px;
+        width: 150px;
+        height: 100%;
+        display: flex;
+        cursor: pointer;        
+    }   
+    .card:hover .overlay {
+        opacity: 1;
+        height: 100px;
+        transition: .5s ease;
+    }
+}
+
+.badge{
+    position:absolute;
+    display: flex;
+    font-size:small;
+    gap: 5px;
+    width: auto;
+    top: 2%;
+    right: 2%;
+    overflow: hidden;
+    /* background-color: antiquewhite; */
+}
+
+.overlay {
+    border-radius: 5px;
+    position: absolute;
+    background-color: #000000ea;
+    height: 0px;
+    bottom: 1%;
+    overflow: hidden;
+    width: 97%;
+    transition: .2s ease-in-out;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    object-fit: contain;
+}
+
+@media (max-width: 915px){
+    /* .overlay {
+        display: none;
+    }
+    .overlay h4{
+        display: none;
+    }
+    .bookbtn{
+        display: none;
+    } */
+
+    footer ul{
+        font-size: 50%;
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+}
+
+.overlay h4{
+    padding:15% 0 50% 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.card:hover .overlay {
+    opacity: 1;
+    height: 260px;
+    transition: .5s ease;
+}
+
+.bookbtn{
+    position: absolute;
+    left: 10%;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 68, 100);
+    border-radius: 8px;
+    width: 80%;
+    cursor: pointer;
+    bottom: 50px;
+}
+
+.ratebtn{
+    position: absolute;
+    cursor: pointer;
+    bottom: 30px;
+    width: 80%;
+    right: 10%;
+}
+
+.bookbtn:hover{
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+}
+
+.overlay .btn-group{
+    align-items: center;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    align-content: center;
+}
+
+footer ul{
+    
+    font-size: 60%;
+    gap: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
+
+footer ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.copyright{
+    padding: 10px;
+    color: rgb(77, 77, 77);
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
+    align-items: center;
+}
+.copyright svg{
+    color: rgb(77, 77, 77);
+}
